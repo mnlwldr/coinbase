@@ -29,15 +29,15 @@ func TestGetWithDate(t *testing.T) {
 
 	response, _ := GetWithDate(fmt.Sprintf("%s-%s", wantCoin, wantCurrency), "2022-02-01")
 	if response.Base != wantCoin {
-		t.Errorf("Translate() = %q, want %q", response.Base, wantCoin)
+		t.Errorf("TestGetWithDate() = %q, want %q", response.Base, wantCoin)
 	}
 
 	if response.Currency != wantCurrency {
-		t.Errorf("TestGet() = %q, want %q", response.Currency, wantCoin)
+		t.Errorf("TestGetWithDate() = %q, want %q", response.Currency, wantCoin)
 	}
 
 	if response.Amount != wantAmount {
-		t.Errorf("TestGet() = %.7f, want %.7f", response.Amount, wantAmount)
+		t.Errorf("TestGetWithDate() = %.7f, want %.7f", response.Amount, wantAmount)
 	}
 
 }
